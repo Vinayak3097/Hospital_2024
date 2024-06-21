@@ -14,8 +14,18 @@ class Doctor(models.Model):
     doc_image = models.ImageField(upload_to='doctors')
 
     def __str__(self):
-        return self.doc_name
+        return f'Dr.{self.doc_name} - {self.doc_spec}'
+    
+class Booking(models.Model):
+    pat_name = models.CharField(max_length=100)
+    pat_email = models.EmailField(max_length=100)
+    pat_phone = models.CharField(max_length=10)
+    doc_name = models.ForeignKey(Doctor,on_delete=models.CASCADE)
+    booking_date = models.DateField()
+    booked_on = models.DateField(auto_now=True)
 
+    def __str__(self):
+        return self.pat_name
 
 
 

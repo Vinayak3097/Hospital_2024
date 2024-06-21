@@ -2,21 +2,36 @@
 {% block title %}Doctors Page{% endblock %}
 
 {% block content %}
+<style>
+.card-img-top {
+    width: 100%; /* Make the image take the full width of the card */
+    height: 300px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensure the image covers the entire area without distorting */
+}
+
+.card {
+    display: inline-block; /* Ensure cards are displayed inline */
+    margin: 10px; /* Add some spacing between cards */
+    vertical-align: top; /* Align the top of the cards */
+}
+</style>
+
 <h1 class="text-center">Our Doctors</h1>
 
-<div class="container">
+<div class="container text-center">
     {% for doc in docs %}  
-    <div class="card" style="width: 18rem;">
+    <div class="card text-center" style="width: 18rem; display: inline-block; margin: 10px;">
         <img class="card-img-top" src="{{doc.doc_image.url}}" alt="{{doc.doc_name}}">
         <div class="card-body">
-            <h5 class="card-title">{{doc.doc_name}}</h5>
+            <h5 class="card-title">Dr. {{doc.doc_name}}</h5>
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">{{doc.doc_spec}}</li>
-            <li class="list-group-item">{{doc.dept_name}}</li>
-        </ul> 
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{doc.doc_spec}}</li>
+                <li class="list-group-item">{{doc.dept_name}} Department</li>
+            </ul> 
     </div>
     {% endfor %}
 </div>
+
 
 {% endblock %}
