@@ -1,0 +1,115 @@
+# Python bytecode
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+
+# Django specific
+*.log
+local_settings.py
+db.sqlite3
+
+# If you're using Django with MySQL, PostgreSQL, etc. you can ignore their specific database files as well
+#*.sql
+#*.sqlite3
+
+# Env files
+.env
+*.env
+
+# PyCharm
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+.vscode/*
+
+# Visual Studio
+.vs/
+*.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# pytype
+.pytype/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+staticfiles/
+media/
+
+# Unit test / coverage reports
+.tox/
+.nox/
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+cover/
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+# Sphinx documentation
+docs/_build/
+# PyBuilder
+target/
+# dotenv
+.env
+# virtualenv
+.venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
+# Spyder project settings
+.spyderproject
+.spyproject
+# Rope project settings
+.ropeproject
+# mkdocs documentation
+/site
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+# pyenv
+.python-version
+# pipenv
+Pipfile.lock
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+# poetry
+poetry.lock
+# PEP 585; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+# mkdocs documentation
+/site
+# Pyre type checker
+.pyre/
+# cython debug symbols
+cython_debug/
