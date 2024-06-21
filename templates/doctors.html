@@ -1,4 +1,22 @@
 {% extends 'base.html' %}
 {% block title %}Doctors Page{% endblock %}
 
-{% block content %}This is Doctors Page{% endblock %}
+{% block content %}
+<h1 class="text-center">Our Doctors</h1>
+
+<div class="container">
+    {% for doc in docs %}  
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{doc.doc_image.url}}" alt="{{doc.doc_name}}">
+        <div class="card-body">
+            <h5 class="card-title">{{doc.doc_name}}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{doc.doc_spec}}</li>
+            <li class="list-group-item">{{doc.dept_name}}</li>
+        </ul> 
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
